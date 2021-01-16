@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/about_edit_appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.WPAM.AppBarOverlay">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/about_edit_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.WPAM.PopupOverlay">
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <EditText
+        android:id="@+id/about_edit"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@+id/about_edit_appbar_layout"
+        android:layout_margin="5dp"
+        android:gravity="top|left"
+        android:hint="Tell something about yourself!"
+        android:inputType="textMultiLine"
+        android:text="" />
+
+
+    <Button
+        android:id="@+id/about_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/about_edit"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:text="Save" />
+
+</RelativeLayout>
+
