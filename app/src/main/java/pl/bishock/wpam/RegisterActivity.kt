@@ -79,6 +79,7 @@ class RegisterActivity : AppCompatActivity() {
                         userHashMap["kids"] = ""
                         userHashMap["cigarettes"] = ""
                         userHashMap["about"] = ""
+                        userHashMap["Matched"] = ""
 
                         refUsers.updateChildren(userHashMap).addOnCompleteListener{task->
                             if (task.isSuccessful){

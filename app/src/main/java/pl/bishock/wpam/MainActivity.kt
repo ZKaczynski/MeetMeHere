@@ -60,6 +60,10 @@ class MainActivity : AppCompatActivity() {
 
                 var countUnreadMessages = 0
 
+
+                viewPagerAdapter.addFragment(SettingsFragment(), "Profile")
+                viewPagerAdapter.addFragment(MyPlacesFragment(), "My Spots")
+                viewPagerAdapter.addFragment(SearchFragment(), "Paired")
                 for (snapshot in s0.children) {
                     val chat = snapshot.getValue(Chat::class.java)
                     if (!chat!!.isSeen && chat.receiver == firebaseUser) {
@@ -71,10 +75,8 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     viewPagerAdapter.addFragment(ChatFragment(), "($countUnreadMessages)Chats")
                 }
-                viewPagerAdapter.addFragment(SearchFragment(), "Paired")
-                viewPagerAdapter.addFragment(SettingsFragment(), "Profile")
-                viewPagerAdapter.addFragment(MyPlacesFragment(), "My Spots")
-                //viewPagerAdapter.addFragment(UserMap(), "My Map")
+
+
 
 
                 viewPager.adapter = viewPagerAdapter
